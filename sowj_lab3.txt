@@ -1,0 +1,72 @@
+1) head  - output the first part of files
+2) tail  - output the last part of files
+3) cut   - remove sections from each line of files
+4) sort  - sort lines of text files
+5) paste - merge lines of files
+6) wc    - print newline, word, and byte counts for each file
+7) grep, egrep, fgrep, rgrep - print lines matching a pattern
+8) uniq - report or omit repeated lines
+9) display third column of filename csv without printing the header also sort the same
+     cut -d , -f 3 sowj1.csv|grep -v cgpa|sort
+     8
+     8.3
+     8.9
+     9
+     9
+     9.2
+     9.3
+     9.4
+     9.4
+     9.5
+     9.6
+     9.7
+     9.8
+     9.9
+10)display only current time using date command
+   date +%H%M%D
+   151701/30/18
+11)use unique with all possible options
+   uniq -c sowj1.csv
+      1 usn,name,cgpa
+      1 1,roshini,9.9
+      1 2,sowjanya,9.8
+      1 3,shreeja,8
+      1 4,sowjanya,8.9
+      1 5,swathi,8.3
+      1 6,sahana,9
+      1 7,sneha,9.5
+      1 8,aryan,9.6
+      1 9,soujanya,9.4
+      1 11,ankitha,9.4
+      1 12,rajani,9.2
+      1 13,sapna,9.7
+      1 14,sanjana,9.3
+      1 15,saranya,9
+12) print number of lines for ls -l command
+      ls -l|wc -l
+10
+      ls -l
+total 36
+-rw-r--r-- 1 cs2016b110 cs2016b110  258 Jan 30 13:46 lab2.txt
+-rw-r--r-- 1 cs2016b110 cs2016b110 1766 Jan 27 11:01 labs1.txt
+-rw-r--r-- 1 cs2016b110 cs2016b110   22 Jan 30 14:37 new.csv
+-rw-r--r-- 1 cs2016b110 cs2016b110   44 Jan 30 14:46 new.txt
+-rw-rw-r-- 1 cs2016b110 cs2016b110    9 Jan 27 12:37 sow.csv
+-rw-rw-r-- 1 cs2016b110 cs2016b110  203 Jan 30 14:01 sowj1.csv
+-rw-r--r-- 1 cs2016b110 cs2016b110 1667 Jan 23 14:43 sowjanya1.txt
+-rw-rw-r-- 1 cs2016b110 cs2016b110  151 Jan 27 12:40 sowj.csv
+-rw-r--r-- 1 cs2016b110 cs2016b110  369 Jan 30 15:01 sowj_lab3.txt
+13) display usn from 7-14 along with other fields
+     head -n 14 sowj1.csv | tail -n 7
+      7,sneha,9.5
+      8,aryan,9.6
+      9,soujanya,9.4
+      11,ankitha,9.4
+      12,rajani,9.2
+      13,sapna,9.7
+      14,sanjana,9.3
+
+  
+
+     
+
