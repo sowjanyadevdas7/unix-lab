@@ -1,0 +1,39 @@
+1.Insert mode(where you can just type like normal text editor.)
+2.Command mode(where you give commands to the editor to get things done)
+*x-to delete the unwanted character
+*u-to undo the last command and U to undo the whole line
+*CTRL-R to redo
+*A- to append text at the end
+*:wq-to save and exit
+*:ql- to trash all changes
+*dw-move the cursor to the beginning of the word delete that word
+*2w-to move the cursor two words forward.
+*3e-to move cursor to the end of the third word forward.
+*0-to move to the start of the line.
+*d2w-which deletes 2 words..number can be changed for deleting the number of consecutive word like d3w.
+*dd to delete the line
+*p- puts the previously deleted text after the cursor
+*r-to replace the letter
+*ce- to change until the end of the word.
+*ce-deletes the word and places you in insert mode.
+*G-to move u to the bottom of the file,.
+*gg-to move you to the start of the file.
+*% to finda matching),),or)
+*:s/old/new/g to substitute 'new'for'old' whrer g is globly
+*/backward search n to find the next occurence and N to search in opposite direction.
+* ?-forward search
+*:l to run the shell commands like:ldir,:ils
+*:w-TEST.Save the file
+* v- starts visual mode for selecting the lines and you can perform operation on that like d delete
+*:r- filename will insert the content into current file.
+*R to replace more than one character
+*y-operator copy text using v visual mode and p to paste it.
+*yw-yanks one word
+* o -opens a line below the cursor and start insert mode.
+*O-opens a line above the cursor.
+*a- insert text after the cursor.
+*A- insert text after the end of the line
+*e command moves to end of aword
+*y-operator yanks text,pn paste it.
+*R- enter replace mode until ESC is pressed
+*ctrl-w to jump one window to another.
