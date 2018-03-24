@@ -1,0 +1,118 @@
+AWK commands:-
+1. Write an awk command to delete all the blank lines from a files.
+
+$cat sowj.txt
+Hi everyone
+this is unix and shell scripting lab
+
+
+
+
+
+
+hi
+
+$ awk 'NF' sowj.txt
+Hi everyone
+this is unix and shell scripting lab
+hi
+
+2. Print only the odd numbers of a file
+$ awk 'NR%2==1' emp1.lst 
+
+23293|roshni|manager|accounts|12/02/98|45000
+37480|sneha|manager|marketing|18/09/90|90000
+34793|swathi|director|sales|16/09/10|438734
+1001|aryan|Manager|70000|9203451209
+1003|tanu|Head_staff|50000|9845367130
+1005|sahana|manager|70000|9206678099
+1007|souj|Staff|60000|9934560287
+1009|pari|Staff|59000|7890452316
+
+3. Write an awk command to print the last field without knowing the number of fields of a file
+
+$ awk -F "|" '{print $NF}' emp1.lst
+
+45000
+67000
+90000
+43874
+438734
+Phone_number
+9203451209
+8892396232
+9845367130
+7856029121
+9206678099
+7856463902
+9934560287
+8894589012
+7890452316
+9873510342
+
+4. write the equivalent awk command for "head -n 5 filename"
+
+$ head -n 5 emp1.lst
+
+23293|roshni|manager|accounts|12/02/98|45000
+27367|soujanya|director|sales|13/08/56|67000
+37480|sneha|manager|marketing|18/09/90|90000
+76483|bagi|CEO|marketing|24/07/80|43874
+34793|swathi|director|sales|16/09/10|438734
+
+$ awk -F "|" 'NR==1,NR==5{print $0}' emp1 .lst
+
+23293|roshni|manager|accounts|12/02/98|45000
+27367|soujanya|director|sales|13/08/56|67000
+37480|sneha|manager|marketing|18/09/90|90000
+76483|bagi|CEO|marketing|24/07/80|43874
+34793|swathi|director|sales|16/09/10|438734
+
+5. write the equivalent awk command for "sed -n '5,10p' filename"
+
+$ sed -n '5,10p' emp1.lst
+
+34793|swathi|director|sales|16/09/10|438734
+emp_id|Name|Designation|Salary|Phone_number
+1001|aryan|Manager|70000|9203451209
+1002|sid|staff|59000|8892396232
+1003|tanu|Head_staff|50000|9845367130
+1004|parth|Director|80000|7856029121
+
+$ awk -F "|" 'NR==5,NR==10{print $0}' emp1.lst
+
+34793|swathi|director|sales|16/09/10|438734
+emp_id|Name|Designation|Salary|Phone_number
+1001|aryan|Manager|70000|9203451209
+1002|sid|staff|59000|8892396232
+1003|tanu|Head_staff|50000|9845367130
+------------------------------------------------------------------------------
+
+6. write the equivalent awk command for "tail +7 filename"
+
+cs2016a206@user:~$ tail +7 emp1.lst
+
+1001|aryan|Manager|70000|9203451209
+1002|sid|staff|59000|8892396232
+1003|tanu|Head_staff|50000|9845367130
+1004|parth|Director|80000|7856029121
+1005|sahana|manager|70000|9206678099
+1006|varun|Director|80000|7856463902
+1007|souj|Staff|60000|9934560287
+1008|dwithi|Staff|60000|8894589012
+1009|pari|Staff|59000|7890452316
+1010|niha|Staff|60000|9873510342
+
+$ awk -F "|" 'NR==7,NR==$NF{print $0}' emp1.lst
+
+1001|Aryan|Manager|70000|9203451209
+1002|sid|staff|59000|8892396232
+1003|tanu|Head_staff|50000|9845367130
+1004|parth|Director|80000|7856029121
+1005|sahana|manager|70000|9206678099
+1006|varun|Director|80000|7856463902
+1007|souj|Staff|60000|9934560287
+1008|dwithi|Staff|60000|8894589012
+1009|pari|Staff|59000|7890452316
+1010|niha|Staff|60000|9873510342
+
